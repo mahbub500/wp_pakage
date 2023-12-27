@@ -1,15 +1,15 @@
 {
-    "name": "codexpert/plugin",
+    "name": "mahbub/plugin",
     "type": "library",
     "description": "Plugin tools for Codexpert",
-    "keywords": ["plugin","codexpert"],
+    "keywords": ["plugin","mahbub"],
     "homepage": "https://bitbucket.org/codexpertio/codexpert-plugin",
     "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "Codexpert",
-            "email": "hello@codexpert.io",
-            "homepage": "https://codexpert.io",
+            "name": "Mahbub",
+            "email": "mahbubmr500@gmail.com",
+            "homepage": "http://wpgeekshub.com",
             "role": "Developer"
         }
     ],
