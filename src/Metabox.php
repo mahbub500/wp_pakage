@@ -37,7 +37,7 @@ class Metabox extends Fields {
 			'sections'		=> [],
 		];
 
-		$this->config = wp_parse_args( apply_filters( 'cx-metabox-args', $args ), $defaults );
+		$this->config 	= wp_parse_args( apply_filters( 'cx-metabox-args', $args ), $defaults );
 		$this->sections	= apply_filters( 'cx-metabox-sections', $this->config['sections'] );
 
 		parent::hooks();
