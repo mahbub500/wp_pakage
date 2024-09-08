@@ -1,5 +1,5 @@
 <?php
-namespace Codexpert\Plugin;
+namespace WpPluginHub\Plugin;
 
 /**
  * if accessed directly, exit.
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Metabox
- * @author Codexpert <hi@codexpert.io>
+ * @author WpPluginHub <mahbubmr500@gmil.com>
  */
 class Metabox extends Fields {
 
@@ -29,7 +29,7 @@ class Metabox extends Fields {
 
 		// default values
 		$defaults = [
-			'id'			=> 'cx-metabox',
+			'id'			=> 'wph-metabox',
 			'label'			=> __( 'Metabox' ),
 			'post_type'		=> [ 'post', 'page' ],
 			'context'		=> 'normal',
@@ -37,8 +37,8 @@ class Metabox extends Fields {
 			'sections'		=> [],
 		];
 
-		$this->config 	= wp_parse_args( apply_filters( 'cx-metabox-args', $args ), $defaults );
-		$this->sections	= apply_filters( 'cx-metabox-sections', $this->config['sections'] );
+		$this->config 	= wp_parse_args( apply_filters( 'wph-metabox-args', $args ), $defaults );
+		$this->sections	= apply_filters( 'wph-metabox-sections', $this->config['sections'] );
 
 		parent::hooks();
 		self::hooks();

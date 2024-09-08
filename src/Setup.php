@@ -1,5 +1,5 @@
 <?php
-namespace Codexpert\Plugin;
+namespace WpPluginHub\Plugin;
 
 /**
  * if accessed directly, exit.
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Setup
- * @author Codexpert <hi@codexpert.io>
+ * @author WpPluginHub <mahbubmr500@gmil.com>
  */
 class Setup extends Base {
 
@@ -56,7 +56,7 @@ class Setup extends Base {
     public function get_logo() {
     	if( ! isset( $this->plugin['icon'] ) ) return '';
 
-    	echo "<img class='cx-wizard-icon' src='{$this->plugin['icon']}' />";
+    	echo "<img class='wph-wizard-icon' src='{$this->plugin['icon']}' />";
     }
 
 	/**
@@ -92,16 +92,16 @@ class Setup extends Base {
 				<?php do_action( 'admin_head' ); ?>
 				<?php do_action( 'admin_print_scripts' ); ?>
 			</head>
-			<body class="cx-setup wp-core-ui cx-wizard-body-panel">
-				<div class="cx-wizard-wrap">
-					<h1 class="cx-wizard-heading <?php echo $hide_title ?>">
+			<body class="wph-setup wp-core-ui wph-wizard-body-panel">
+				<div class="wph-wizard-wrap">
+					<h1 class="wph-wizard-heading <?php echo $hide_title ?>">
 						<a href="<?php echo $this->get_step_url( array_keys( $this->steps )[0] ); ?>">
 							<?php $this->get_logo(); ?>
 							<?php echo $this->name; ?>
 						</a>
 					</h1>
 					<?php $this->pagination(); ?>
-					<div class="cx-wizard-container">
+					<div class="wph-wizard-container">
 		<?php
 	}
 
@@ -109,14 +109,14 @@ class Setup extends Base {
 		
 		if( count( $this->steps ) > 1 ) {
 			
-			echo '<div class="cx-wizard-stepper-wrapper">';
+			echo '<div class="wph-wizard-stepper-wrapper">';
 
 			$count = 1;
 			$passed = 'passed-step';
 
 			foreach ( $this->steps as $step => $data ) {
 
-				$_classes = [ 'cx-step' ];
+				$_classes = [ 'wph-step' ];
 				if( $step == $this->current_step() ) {
 					$_classes[] = 'current-step';
 				}
@@ -131,9 +131,9 @@ class Setup extends Base {
 				$url = $this->get_step_url( $step );
 
 				echo "
-				  <div class='cx-wizard-stepper-item cx-step-{$count} {$classes} {$passed}'>
-				    <div class='cx-wizard-step-name'><a href='{$url}'>{$data['label']}</a></div>
-				    <div class='cx-wizard-step-counter'></div>
+				  <div class='wph-wizard-stepper-item wph-step-{$count} {$classes} {$passed}'>
+				    <div class='wph-wizard-step-name'><a href='{$url}'>{$data['label']}</a></div>
+				    <div class='wph-wizard-step-counter'></div>
 				  </div>
 				";
 
@@ -149,13 +149,13 @@ class Setup extends Base {
 
 		?>
 
-		<div class="cx-wizard-content">
+		<div class="wph-wizard-content">
 			<?php 
 			$current_step 	= $this->current_step();
 			$action 		= add_query_arg( 'saved', 1, $this->get_step_url( $current_step ) );
-			echo "<form id='cx-{$current_step}-form' method='POST' action='{$action}'>";
+			echo "<form id='wph-{$current_step}-form' method='POST' action='{$action}'>";
 			?>
-		<div class="cx-wizard-page">
+		<div class="wph-wizard-page">
 		<?php
 	}
 
@@ -182,23 +182,23 @@ class Setup extends Base {
 	public function footer() {
 		$config = $this->step_config( $this->current_step() );
 		?>
-									<div class="cx-wizard-btns">
+									<div class="wph-wizard-btns">
 										<?php 
 										$prev_step 		= $this->previous_step();
 										$current_step 	= $this->current_step();
 										$next_step 		= $this->next_step();
 										$prev_step_url 	= isset( $config['prev_url'] ) ? $config['prev_url'] : $this->get_step_url( $prev_step );
 										$disabled		= $prev_step == $current_step ? 'disabled' : '';
-										$prev_text 		= isset( $config['prev_text'] ) ? $config['prev_text'] : __( 'Previous', 'cx-plugin' );
-										$next_text		= $current_step == $next_step ? __( 'Finish', 'cx-plugin' ) : ( isset( $config['next_text'] ) ? $config['next_text'] : __( 'Next', 'cx-plugin' ) );
+										$prev_text 		= isset( $config['prev_text'] ) ? $config['prev_text'] : __( 'Previous', 'wph-plugin' );
+										$next_text		= $current_step == $next_step ? __( 'Finish', 'wph-plugin' ) : ( isset( $config['next_text'] ) ? $config['next_text'] : __( 'Next', 'wph-plugin' ) );
 
-										echo "<a class='cx-wizard-btn btn-hero prev {$disabled}' href='{$prev_step_url}'>{$prev_text}</a>";
+										echo "<a class='wph-wizard-btn btn-hero prev {$disabled}' href='{$prev_step_url}'>{$prev_text}</a>";
 
 										if( ! isset( $config['next_url'] ) ) {
-											echo "<button id='{$current_step}-btn' class='cx-wizard-btn btn-hero btn-primary next'>{$next_text}</button>";
+											echo "<button id='{$current_step}-btn' class='wph-wizard-btn btn-hero btn-primary next'>{$next_text}</button>";
 										}
 										else {
-											echo "<a id='{$current_step}-btn' class='cx-wizard-btn btn-hero btn-primary next' href='{$config['next_url']}'>{$next_text}</a>";
+											echo "<a id='{$current_step}-btn' class='wph-wizard-btn btn-hero btn-primary next' href='{$config['next_url']}'>{$next_text}</a>";
 										}
 										?>
 									</div>

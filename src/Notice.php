@@ -1,5 +1,5 @@
 <?php
-namespace Codexpert\Plugin;
+namespace WpPluginHub\Plugin;
 
 /**
  * if accessed directly, exit.
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * @package Plugin
  * @subpackage Notice
- * @author Codexpert <hi@codexpert.io>
+ * @author WpPluginHub <mahbubmr500@gmil.com>
  */
 class Notice extends Base {
 	
@@ -82,8 +82,8 @@ class Notice extends Base {
 
 	public function print() {
 
-		if( did_action( 'cx-notice' ) || ! current_user_can( 'manage_options' ) ) return;
-		do_action( 'cx-notice' );
+		if( did_action( 'wph-notice' ) || ! current_user_can( 'manage_options' ) ) return;
+		do_action( 'wph-notice' );
 
 		global $cx_notices;
 
@@ -91,7 +91,7 @@ class Notice extends Base {
 			foreach( $cx_notices as $notice ) {
 				$is_dismissible = isset( $notice['dismissible'] ) && $notice['dismissible'] ? ' is-dismissible': '';
 				echo "
-					<div class='notice notice-{$notice['type']}{$is_dismissible} cx-notice cx-shadow'>
+					<div class='notice notice-{$notice['type']}{$is_dismissible} wph-notice wph-shadow'>
 						" . $notice['text'] . "
 					</div>
 				";

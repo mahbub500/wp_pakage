@@ -1,7 +1,7 @@
 jQuery(function($){
-    $(document).on('click', '.cx-survey .notice-dismiss, .cx-survey .cx-survey-btn', function(e){
+    $(document).on('click', '.wph-survey .notice-dismiss, .wph-survey .wph-survey-btn', function(e){
         $(this).prop('disabled', true);
-        var $slug = $(this).closest('.cx-survey').data('slug')
+        var $slug = $(this).closest('.wph-survey').data('slug')
         $.ajax({
             url: ajaxurl,
             data: { 'action' : $slug + '_survey', 'participate' : $(this).data('participate') },

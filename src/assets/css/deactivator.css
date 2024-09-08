@@ -1,4 +1,4 @@
-.cx-plugin-deactivation-survey-overlay {
+.wph-plugin-deactivation-survey-overlay {
 	background: rgba(0,0,0,.5);
 	position: fixed;
 	top: 0;
@@ -10,33 +10,33 @@
 	align-items: center;
 	justify-content: center;
 }
-.cx-plugin-deactivation-survey-modal {
+.wph-plugin-deactivation-survey-modal {
     width: 50%;
     background: #fff;
     padding: 10px;
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
-.cx-plugin-deactivation-survey-img > img {
+.wph-plugin-deactivation-survey-img > img {
     max-width: 100%;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-dsm-header {
+.wph-plugin-deactivation-survey-modal .wph-plugin-dsm-header {
 	padding: 0px 15px;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-dsm-body {
+.wph-plugin-deactivation-survey-modal .wph-plugin-dsm-body {
     padding: 20px 15px;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-deactivation-reasons {
+.wph-plugin-deactivation-survey-modal .wph-plugin-deactivation-reasons {
     display: grid;
     gap: 10px;
     margin-bottom: 15px;
     grid-template-columns: repeat(3, 1fr);
 }
-.cx-plugin-dsm-header .cx-title {
+.wph-plugin-dsm-header .wph-title {
     margin-top: 0;
     float: left;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-deactivation-reasons .cx-plugin-deactivation-reason label {
+.wph-plugin-deactivation-survey-modal .wph-plugin-deactivation-reasons .wph-plugin-deactivation-reason label {
 	display: block;
 	border: 1px solid #ccc;
 	padding: 10px;
@@ -44,41 +44,41 @@
 	height: 40px;
 	border-radius: 4px;
 }
-.cx-plugin-dsm-footer .button:not(.button-primary):not(:hover) {
+.wph-plugin-dsm-footer .button:not(.button-primary):not(:hover) {
     border-color: #dee0e1;
     color: #949799;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-deactivation-reasons .cx-plugin-deactivation-reason label.active {
+.wph-plugin-deactivation-survey-modal .wph-plugin-deactivation-reasons .wph-plugin-deactivation-reason label.active {
 	background: #007cba;
 	color: #fff;
 	border-color: #007cba;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-deactivation-reasons .cx-plugin-deactivation-reason input{
+.wph-plugin-deactivation-survey-modal .wph-plugin-deactivation-reasons .wph-plugin-deactivation-reason input{
 	display: none;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-dsm-reason-details-input {
+.wph-plugin-deactivation-survey-modal .wph-plugin-dsm-reason-details-input {
 	width: 100%;
 	border: 1px solid #ccc;
 	display: none;
 }
-.cx-plugin-deactivation-survey-modal .cx-plugin-dsm-footer {
+.wph-plugin-deactivation-survey-modal .wph-plugin-dsm-footer {
     border-top: 1px solid #f1f1f1;
     display: flex;
     justify-content: space-between;
     padding: 20px 10px 10px 10px;
 }
-.cx-heading {
+.wph-heading {
 	font-weight: normal;
 	text-align: center;
 	overflow: hidden;
 }
-.cx-desc {
+.wph-desc {
 	color: #d7d7d7;
 	font-style: italic;
 	text-align: right;
 	margin: 0 auto 5px auto;
 }
-.cx-consent-label {
+.wph-consent-label {
 	float: right;
 	font-size: 12px;
 	padding-right: 5px;

@@ -7,15 +7,15 @@ namespace Composer\Autoload;
 class ComposerStaticInit9d6af050f0e6e86420d25ea3c3afe16f
 {
     public static $classMap = array (
-        'Codexpert\\Plugin\\Base' => __DIR__ . '/../..' . '/src/Base.php',
-        'Codexpert\\Plugin\\Fields' => __DIR__ . '/../..' . '/src/Fields.php',
-        'Codexpert\\Plugin\\Metabox' => __DIR__ . '/../..' . '/src/Metabox.php',
-        'Codexpert\\Plugin\\Notice' => __DIR__ . '/../..' . '/src/Notice.php',
-        'Codexpert\\Plugin\\Settings' => __DIR__ . '/../..' . '/src/Settings.php',
-        'Codexpert\\Plugin\\Setup' => __DIR__ . '/../..' . '/src/Setup.php',
-        'Codexpert\\Plugin\\Table' => __DIR__ . '/../..' . '/src/Table.php',
-        'Codexpert\\Plugin\\Widget' => __DIR__ . '/../..' . '/src/Widget.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'WpPluginHub\\Plugin\\Base' => __DIR__ . '/../..' . '/src/Base.php',
+        'WpPluginHub\\Plugin\\Fields' => __DIR__ . '/../..' . '/src/Fields.php',
+        'WpPluginHub\\Plugin\\Metabox' => __DIR__ . '/../..' . '/src/Metabox.php',
+        'WpPluginHub\\Plugin\\Notice' => __DIR__ . '/../..' . '/src/Notice.php',
+        'WpPluginHub\\Plugin\\Settings' => __DIR__ . '/../..' . '/src/Settings.php',
+        'WpPluginHub\\Plugin\\Setup' => __DIR__ . '/../..' . '/src/Setup.php',
+        'WpPluginHub\\Plugin\\Table' => __DIR__ . '/../..' . '/src/Table.php',
+        'WpPluginHub\\Plugin\\Widget' => __DIR__ . '/../..' . '/src/Widget.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

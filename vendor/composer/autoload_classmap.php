@@ -6,13 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Codexpert\\Plugin\\Base' => $baseDir . '/src/Base.php',
-    'Codexpert\\Plugin\\Fields' => $baseDir . '/src/Fields.php',
-    'Codexpert\\Plugin\\Metabox' => $baseDir . '/src/Metabox.php',
-    'Codexpert\\Plugin\\Notice' => $baseDir . '/src/Notice.php',
-    'Codexpert\\Plugin\\Settings' => $baseDir . '/src/Settings.php',
-    'Codexpert\\Plugin\\Setup' => $baseDir . '/src/Setup.php',
-    'Codexpert\\Plugin\\Table' => $baseDir . '/src/Table.php',
-    'Codexpert\\Plugin\\Widget' => $baseDir . '/src/Widget.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'WpPluginHub\\Plugin\\Base' => $baseDir . '/src/Base.php',
+    'WpPluginHub\\Plugin\\Fields' => $baseDir . '/src/Fields.php',
+    'WpPluginHub\\Plugin\\Metabox' => $baseDir . '/src/Metabox.php',
+    'WpPluginHub\\Plugin\\Notice' => $baseDir . '/src/Notice.php',
+    'WpPluginHub\\Plugin\\Settings' => $baseDir . '/src/Settings.php',
+    'WpPluginHub\\Plugin\\Setup' => $baseDir . '/src/Setup.php',
+    'WpPluginHub\\Plugin\\Table' => $baseDir . '/src/Table.php',
+    'WpPluginHub\\Plugin\\Widget' => $baseDir . '/src/Widget.php',
 );
