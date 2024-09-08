@@ -1,5 +1,5 @@
 {
-    "name": "mahbub/plugin",
+    "name": "wppluginhub/plugin",
     "type": "library",
     "description": "Plugin tools for WpPluginHub",
     "keywords": ["plugin","mahbub"],
